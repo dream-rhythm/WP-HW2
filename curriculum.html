@@ -1,0 +1,62 @@
+﻿<!doctype html>
+
+<html>
+	
+<head>
+		
+	<meta charset='utf-8'>
+		
+	<title>我的課表</title>
+	
+</head>
+	
+<body>
+
+		
+	已選學分:22<br>
+	<table border='1' id='timetable'  width="1200" style="table-layout:fixed">
+		
+	</table>
+
+	快速連結:<br>
+	<a href='http://cbook.hackersir.org'>資料結構實習</a><br>
+	<a href='http://nicky.esy.es/dm'>離散數學</a><br>
+	<a href='http://rfidlab.iecs.fcu.edu.tw/ISTM/ISTM_index.html'>Purdue C</a>		
+	<script>
+			
+		var obj=document.getElementById('timetable');
+
+		var c=["班級活動<br>資電403<br>陳啟鏘","通訊與網路概論<br>忠B08<br>洪維志","物件導向設計<br>忠B01<br>陳錫民","軟體工程導論<br>忠B01<br>許懷中","通訊與網路概論<br>語407<br>洪維志","智慧定位-衛星導航<br>人406<br>穆青雲","Web程式設計<br>資電B19<br>陳錫民","體育－桌球<br>桌球室<br>陳富美","離散數學<br>資電404<br>黃秋煌","資料結構<br>商303<br>陳奕中","資料結構實習<br>資電B19<br>陳奕中","物件導向設計<br>資電222<br>陳錫民","Purdue C<br>忠勤611<br>林冠佑,陳琮斌","資料結構<br>忠207<br>陳奕中","軟體工程導論<br>語407<br>許懷中","物件導向設計<br>資電B19<br>陳錫民"];
+		var week=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+	
+		var Mon=["","","","","",c[0],c[0],c[1],"","",c[12],c[12],""];
+		var Tue=[c[2],c[2],c[3],c[3],"&nbsp<br>&nbsp<br>&nbsp",c[4],c[4],c[5],c[5],"",c[6],c[6],c[6]];
+		var Wed=[c[7],c[7],c[8],c[8],"",c[9],"","","","",c[10],c[10],c[10]];
+		var Thu=["",c[11],c[8],"","",c[13],c[13],"","",c[14],"","",""];
+		var Fri=[c[15],c[15],"","","","","","","","","","",""];
+		var Sat=["","","","","","","","","","","","",""];
+		var Sun=["","","","","","","","","","","","",""];
+		var str="";		
+			
+		for(var i=0;i<=13;i++){				
+			if(i!=0)str=str+'<tr>'+'<td align="center" >'+i+'<br>'+(i+7)+":10~"+(i+8)+":00"+'</td>';
+
+			else str=str+'<td></td>'				
+			for(var j=0;j<7;j++){
+					
+				if(i===0)str=str+'<td align="center" >'+week[j]+'</td>';
+				else str=str+'<td align="center" >'+eval(week[j])[i-1]+'</td>';
+				
+			}
+				
+			str=str+'</tr>';
+			
+		}
+
+		
+		obj.innerHTML=str;		
+	</script>
+	
+</body>
+
+</html>

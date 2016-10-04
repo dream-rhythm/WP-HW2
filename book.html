@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>圖書館借書系統</title>
+	</head>
+<body>
+	<strong>圖書館借書系統</strong><br>
+	<form>
+		<lable>書名:<input name='bookName' type='text' autofocus></input></lable><br>
+		<lable>姓名:<input name='userName' type='text'></input></lable><br>
+		<lable>性別:
+			<lable><input name='gender' type='radio' value='male' checked></input>男</lable>
+			<lable><input name='gender' type='radio' value='female'></input>女</lable>
+		</lable><br>
+		<lable>學系:
+			<select name='department'>
+				<option value='資工' selected='true'>資工</option>
+				<option value='電機'>電機</option>
+				<option value='通訊'>通訊</option>
+			</select>
+		</lable><br>
+		<input type='submit' value='借書'></input>
+		<input type='reset' value='重設'></input>
+	</form>
+</body>
+</html>
